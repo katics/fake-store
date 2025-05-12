@@ -1,0 +1,199 @@
+/* Flat, modern navigation bar */
+.header {
+  background: #f7f7f7;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  position: var(--header-position, sticky);
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #e0e0e0;
+  transition: box-shadow 0.2s;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: -1px;
+  transition: color 0.2s;
+}
+
+.brand:hover,
+.brand:focus {
+  color: #0070f3;
+  outline: none;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  margin-right: 0.1rem;
+}
+
+.brandText {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.brandAccent {
+  color: #0070f3;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.menuLink {
+  color: #222;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.menuLink:hover,
+.menuLink:focus {
+  background: #eaeaea;
+  color: #0070f3;
+  outline: none;
+}
+
+.cartIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  text-decoration: none;
+  background: none;
+  border-radius: 8px;
+  padding: 0.3rem 0.5rem;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
+}
+
+.cartIcon:hover,
+.cartIcon:focus {
+  background: #eaeaea;
+  color: #0070f3;
+  outline: 2px solid #0070f3;
+  outline-offset: 2px;
+}
+
+.cartSvg {
+  width: 28px;
+  height: 28px;
+}
+
+.cartCount {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: linear-gradient(135deg, #ff5a5f 60%, #ffb400 100%);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  border: 2px solid #fff;
+}
+
+.linksDesktop {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 201;
+}
+
+.hamburgerBar {
+  width: 26px;
+  height: 3px;
+  background: #222;
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+@media (max-width: 900px) {
+  .nav {
+    padding: 0.9rem 1.5rem;
+  }
+  .left,
+  .right {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav {
+    padding: 0.8rem 1.2rem;
+  }
+  .brandText {
+    font-size: 1.3rem;
+  }
+  .cartSvg {
+    width: 24px;
+    height: 24px;
+  }
+  .cartCount {
+    width: 18px;
+    height: 18px;
+    font-size: 0.75rem;
+  }
+  .left,
+  .right {
+    gap: 0.7rem;
+  }
+  .linksDesktop {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}

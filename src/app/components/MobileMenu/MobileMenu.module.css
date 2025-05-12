@@ -1,0 +1,137 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.18);
+  z-index: 200;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  max-width: 320px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 16px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  z-index: 210;
+  gap: 1.5rem;
+  align-items: flex-start;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(100%);
+  border-left: 2.5px solid #ececec;
+}
+
+.menuOpen {
+  transform: translateX(0);
+  display: flex;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  background: none;
+  border: none;
+  font-size: 2.1rem;
+  color: #888;
+  cursor: pointer;
+  z-index: 220;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.18s;
+}
+
+.closeButton:hover,
+.closeButton:focus {
+  color: #0070f3;
+  outline: none;
+}
+
+.menuLink {
+  color: #222;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.menuLink:hover,
+.menuLink:focus {
+  background: #eaeaea;
+  color: #0070f3;
+  outline: none;
+}
+
+.menuDivider {
+  width: 100%;
+  height: 1.5px;
+  background: linear-gradient(90deg, #ececec 60%, #f7f7f7 100%);
+  margin: 0.7rem 0;
+  border: none;
+}
+
+.cartLink {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #222;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  margin-top: 0.2rem;
+  position: relative;
+}
+
+.cartLink:hover,
+.cartLink:focus {
+  background: #eaeaea;
+  color: #0070f3;
+  outline: none;
+}
+
+.cartSvg {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.cartCount {
+  position: absolute;
+  top: 0px;
+  left: 22px;
+  background: linear-gradient(135deg, #ff5a5f 60%, #ffb400 100%);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  border: 2px solid #fff;
+  z-index: 1;
+}
+
+.cartText {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}

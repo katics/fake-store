@@ -1,0 +1,66 @@
+.main {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1ch;
+}
+
+.header {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+  color: #222;
+  text-align: center;
+}
+
+.count {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.cardWrapper {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+}
+
+@media (max-width: 700px) {
+  .main {
+    padding: 1.2rem 0.5rem 2rem 0.5rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .count {
+    font-size: 1rem;
+  }
+  .grid {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

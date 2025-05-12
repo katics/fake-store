@@ -1,0 +1,30 @@
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: 1px solid var(--border-color);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    transform: translateY(-7px) scale(1.045);
+    box-shadow: 0 10px 24px rgba(0, 112, 243, 0.1);
+    border-color: #0070f3;
+  }
+}
+
+.card h2 {
+  color: var(--text-color);
+  margin: 0;
+  font-size: 1.25rem;
+}

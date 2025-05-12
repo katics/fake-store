@@ -1,0 +1,35 @@
+.errorContainer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff5f5;
+  border: 1px solid #ffcccc;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.errorTitle {
+  color: #e53e3e;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.errorMessage {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+.retryButton {
+  background-color: #3182ce;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.retryButton:hover {
+  background-color: #2c5282;
+}

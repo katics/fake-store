@@ -1,0 +1,27 @@
+# Dependency directories
+node_modules/
+.next/
+out/
+
+# Build outputs
+build/
+dist/
+coverage/
+
+# Cache
+.npm
+.eslintcache
+.turbo
+
+# Log files
+*.log
+
+# Environment variables
+.env*
+!.env.example
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo 
